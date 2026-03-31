@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
-     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <link
       rel="icon"
       type="image/png"
@@ -17,37 +17,68 @@
     </title>
   </head>
   <body>
-    <section class="flex-row Newsletter">
-      <section class="Content">
-        <h1 class="Updated">Stay updated!</h1>
-        <p class="text">Join 60,000+ product managers receiving monthly updates on:</p>
-        <form action="" class="signup">
-          <ul>
-            <li>Product discovery and building what matters</li>
-            <li>Measuring to ensure updates are a success</li>
-            <li>And much more!</li>
-          </ul>
+    <section class="Newsletter">
+      <div class="Content">
+        <h1>Stay updated!</h1>
+
+        <p>Join 60,000+ product managers receiving monthly updates on:</p>
+
+        <ul>
+          <li>Product discovery and building what matters</li>
+          <li>Measuring to ensure updates are a success</li>
+          <li>And much more!</li>
+        </ul>
+
+        <form class="signup">
           <div class="emailAdsress">
-            <label for="Email">Email address</label><br>
-            <input
-              type="email"
-              name="Email"
-              id=" Email"
-              placeholder="email@company.com"
-            />
+            <div class="label-row">
+              <label for="email">Email address</label>
+              <span class="error" id="errorMsg"></span>
+            </div>
+
+            <input type="email" id="email" placeholder="ash@company.com" />
           </div>
-          <input type="submit" value=" Subscribe to monthly newsletter" />
+          <button type="submit">Subscribe to monthly newsletter</button>
         </form>
-      </section>
-      <section class="image">
-        <img src="assets/images/illustration-sign-up-desktop.svg" alt="signUp" width="100%">
-      </section>
+      </div>
+
+      <div class="image">
+        <picture>
+          <source
+            media="(max-width: 768px)"
+            srcset="assets/images/illustration-sign-up-tablet.svg"
+          />
+          <source 
+           media="(max-width: 420px)"
+            srcset="assets/images/illustration-sign-up-mobile.svg"
+          />
+          <img
+            src="assets/images/illustration-sign-up-desktop.svg"
+            alt="signUp"
+          />
+        </picture>
+      </div>
     </section>
+    <section class="success" style="display: none;">
+  
+  <div class="success-content">
+    <img src="assets/images/icon-success.svg" />
+
+    <h1>Thanks for subscribing!</h1>
+
+    <p id="successMsg">
+      A confirmation email has been sent to <strong></strong>.
+      Please open it and click the button inside to confirm your subscription.
+    </p>
+  </div>
+
+  <button id="dismissBtn">Dismiss message</button>
+</section>
 
     <!-- <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
     Coded by <a href="#">Laiba Ijaz</a>.
   </footer> -->
-  <script src="script.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>

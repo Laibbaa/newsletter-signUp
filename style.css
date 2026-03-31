@@ -31,23 +31,154 @@ body {
   gap: 10px;
 }
 .Newsletter {
-  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px;
   width: 800px;
-  background-color: hsl(0, 0%, 100%);
-  border-radius: 30px;
+  background: white;
+  border-radius: 20px;
+  gap: 20px;
 }
 .Content {
-  padding: 20px;
+  flex: 1;
+}
+
+.Content h1 {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.Content p {
+  margin-bottom: 20px;
+}
+
+
+ul {
+  margin-bottom: 50px;
+}
+
+ul li {
+  list-style: none;
+  margin-bottom: 10px;
+  padding-left: 30px;
+  background: url("assets/images/icon-list.svg") no-repeat left center;
+}
+.signup {
   display: flex;
-  align-items: start;
-  justify-content: start;
-  gap: 20px;
   flex-direction: column;
 }
-.Updated {
-    font-size: 3rem;
-    font-weight: bold;
+
+.signup input {
+  padding: 18px;
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin: 10px 0;
 }
-.text{
-    font-weight: 500;
+
+.signup button {
+  padding: 15px;
+  text-align: center;
+  border: none;
+  border-radius: 8px;
+  background: hsl(234, 29%, 20%);
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+}
+.signup button:hover{
+  background-color: hsl(4, 100%, 67%);
+}
+.image img {
+  width: 350px;
+}
+.label-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+}
+.success{
+display: flex;
+flex-direction: column;
+border-radius: 30px;
+background-color: white;
+width: 426px;
+padding: 36px;
+gap: 20px;
+justify-content: center;
+align-items: start;
+}
+.success h1{
+  font-size: 40px;
+}
+.success button{ 
+  padding: 15px;
+  width: 100%;
+  text-align: center;
+  border: none;
+  border-radius: 8px;
+  background: hsl(234, 29%, 20%);
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+}
+.success button:hover{
+  background-color: hsl(4, 100%, 67%);
+
+}
+.success-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: start;
+}
+@media (max-width: 768px) {
+  body {
+    height: auto;
+    padding: 20px;
+  }
+
+  .Newsletter {
+    flex-direction: column-reverse; /* image on top */
+    width: 100%;
+    padding: 20px;
+    border-radius: 15px;
+  }
+
+  .Content h1 {
+    font-size: 28px;
+  }
+
+  .image img {
+    width: 100%;
+    border-radius: 15px;
+  }
+
+  ul {
+    margin-bottom: 30px;
+  }
+
+   .success {
+    width: 100%;
+    height: 90vh; 
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    
+    align-items: start;
+    text-align: start;
+  }
+
+  .success h1 {
+    font-size: 28px;
+  }
+  .success-content{
+    padding-top:70px ;
+  }
 }
