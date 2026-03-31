@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=League+Spartan&family=Manrope:wght@200..800&family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Young+Serif&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ /* <weight>: Use a value from 100 to 900 */
+/* // <uniquifier>: Use a unique and descriptive class name */
+/* .roboto-<uniquifier> {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+} */
+body {
+  background-color: hsl(235, 18%, 26%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  max-height: 100%;
+  font-family: "Roboto", sans-serif;
+}
+.flex-row {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  flex-direction: row;
+  gap: 10px;
+}
+.Newsletter {
+  padding: 20px;
+  width: 800px;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 30px;
+}
+.Content {
+  padding: 20px;
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  gap: 20px;
+  flex-direction: column;
+}
+.Updated {
+    font-size: 3rem;
+    font-weight: bold;
+}
+.text{
+    font-weight: 500;
+}
